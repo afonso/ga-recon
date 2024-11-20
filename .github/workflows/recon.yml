@@ -19,6 +19,9 @@ jobs:
         with:
           domains: ${{ vars.TARGET_DOMAIN }}
           brute: true
+          timeout: 1
+          dnsqps: 500
+          dnsfile: resolvers.txt
           output: hosts.txt
           
       - name: Prepare - Amass
